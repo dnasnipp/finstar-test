@@ -41,7 +41,7 @@ export default {
             return state.users;
         },
         getUsersSortedByCompletedPosts: (state: UsersState): User[] => {
-            return state.users.sort((userA: User, userB: User) => {
+            return [...state.users].sort((userA: User, userB: User) => {
                 const completePostsA = calculateCompletedPosts(userA);
                 const completePostsB = calculateCompletedPosts(userB);
 
