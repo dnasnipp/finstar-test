@@ -1,27 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <v-container>
+    <user-list />
+  </v-container>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+<script>
+  import VContainer from "./components/VContainer";
+  import UserList from "./components/UserList/UserList";
 
-export default defineComponent({
-  name: 'App',
-  components: {
-    HelloWorld
+  export default {
+    components: {
+      VContainer,
+      UserList
+    }
   }
-});
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>

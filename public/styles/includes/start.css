@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    color: var(--mainColor);
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Montserrat';
+}
+
+
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 9px;
+    }
+}
