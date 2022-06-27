@@ -57,7 +57,8 @@
     components: {
       VSection,
       VH,
-      VButton
+      VButton,
+      UserCard
     }
   }
 
