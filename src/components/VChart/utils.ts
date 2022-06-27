@@ -220,7 +220,7 @@ export const getValueController = (gl: WebGLRenderingContext) => {
             gl.vertexAttribPointer(vertPointer, 2, gl.FLOAT, false, Float32Array.BYTES_PER_ELEMENT*3, 0);
             gl.vertexAttribPointer(colPointer, 1, gl.FLOAT, false, Float32Array.BYTES_PER_ELEMENT*3, Float32Array.BYTES_PER_ELEMENT*2);
 
-            gl.drawArrays(gl.TRIANGLES, 0, meshPlanes.length/3)
+            gl.drawArrays(gl.TRIANGLES, 0, meshPlanes.length/3);
         },
         setData: (data: number[][], maximum: number) => {
             generateMeshes(data, maximum);
