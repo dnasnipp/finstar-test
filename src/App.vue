@@ -1,9 +1,18 @@
 <template>
   <v-container>
     <user-list />
-    <v-chart/>
+    <v-chart
+        :values="store.getters.getUsersPostsValues"
+        :labels="store.getters.getUsersLabels"
+    />
   </v-container>
 </template>
+
+<script setup>
+  import {useStore} from "vuex";
+
+  const store = useStore();
+</script>
 
 <script>
   import VContainer from "@/components/VContainer";

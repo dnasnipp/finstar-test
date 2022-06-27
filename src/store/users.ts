@@ -49,6 +49,25 @@ export default {
 
                 return lengthDiff === 0 ? userB.id - userA.id : lengthDiff;
             });
+        },
+        getUsersPostsValues: (state: UsersState) => {
+            return state.users.map(user => {
+                return user.posts.reduce((acc, post) => {
+
+                    if(post.completed) {
+                        acc[0]++;
+                    } else {
+                        acc[1]++;
+                    }
+
+                    return acc;
+                }, [0,0]);
+            });
+        },
+        getUsersLabels: (state: UsersState) => {
+            return state.users.map((user) => {
+                return `User: ${user.id}`;
+            });
         }
     },
     mutations: {
